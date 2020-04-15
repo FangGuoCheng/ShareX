@@ -52,6 +52,7 @@ namespace ShareX.UploadersLib.FileUploaders
             return new OwnCloud(config.OwnCloudHost, config.OwnCloudUsername, config.OwnCloudPassword)
             {
                 Path = config.OwnCloudPath,
+                URLPath = config.OwnCloudURLPath,
                 CreateShare = config.OwnCloudCreateShare,
                 DirectLink = config.OwnCloudDirectLink,
                 PreviewLink = config.OwnCloudUsePreviewLinks,
@@ -70,6 +71,7 @@ namespace ShareX.UploadersLib.FileUploaders
         public string Username { get; set; }
         public string Password { get; set; }
         public string Path { get; set; }
+        public string URLPath { get; set; }
         public int AutoExpireTime { get; set; }
         public bool CreateShare { get; set; }
         public bool DirectLink { get; set; }
@@ -189,7 +191,11 @@ namespace ShareX.UploadersLib.FileUploaders
                         {
                             link += (IsCompatibility81 ? "/" : "&") + "download";
                         }
-                        return link;
+
+                        char[] splitChar = { '/' };
+                        string[] strs = path.Split(splitChar);
+                        string name = strs[strs.Length - 1];
+                        return URLPath + "/" + name;
                     }
                     else
                     {

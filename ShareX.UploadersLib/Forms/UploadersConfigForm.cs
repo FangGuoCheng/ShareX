@@ -577,6 +577,7 @@ namespace ShareX.UploadersLib
             txtOwnCloudUsername.Text = Config.OwnCloudUsername;
             txtOwnCloudPassword.Text = Config.OwnCloudPassword;
             txtOwnCloudPath.Text = Config.OwnCloudPath;
+            txtOwnCloudURLPath.Text = Config.OwnCloudURLPath;
             txtOwnCloudExpiryTime.Value = Config.OwnCloudExpiryTime;
             cbOwnCloudCreateShare.Checked = Config.OwnCloudCreateShare;
             cbOwnCloudDirectLink.Checked = Config.OwnCloudDirectLink;
@@ -2300,6 +2301,10 @@ namespace ShareX.UploadersLib
         private void txtOwnCloudPath_TextChanged(object sender, EventArgs e)
         {
             Config.OwnCloudPath = txtOwnCloudPath.Text;
+        }
+        private void txtOwnCloudURLPath_TextChanged(object sender, EventArgs e)
+        {
+            Config.OwnCloudURLPath = txtOwnCloudURLPath.Text;
         }
 
         private void txtOwnExpiryTime_TextChanged(object sender, EventArgs e)

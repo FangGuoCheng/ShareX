@@ -303,6 +303,7 @@ namespace ShareX.UploadersLib
         public bool OwnCloudUsePreviewLinks = false;
         public bool OwnCloudAutoExpire = false;
 
+        public string OwnCloudURLPath = "www.bing.com";
         #endregion ownCloud / Nextcloud
 
         #region MediaFire

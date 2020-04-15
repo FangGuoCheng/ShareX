@@ -305,6 +305,7 @@ namespace ShareX.UploadersLib
             this.cbOwnCloudDirectLink = new System.Windows.Forms.CheckBox();
             this.cbOwnCloudCreateShare = new System.Windows.Forms.CheckBox();
             this.txtOwnCloudPath = new System.Windows.Forms.TextBox();
+            this.txtOwnCloudURLPath = new System.Windows.Forms.TextBox();
             this.txtOwnCloudPassword = new System.Windows.Forms.TextBox();
             this.txtOwnCloudUsername = new System.Windows.Forms.TextBox();
             this.txtOwnCloudHost = new System.Windows.Forms.TextBox();
@@ -2492,6 +2493,7 @@ namespace ShareX.UploadersLib
             this.tpOwnCloud.Controls.Add(this.cbOwnCloudDirectLink);
             this.tpOwnCloud.Controls.Add(this.cbOwnCloudCreateShare);
             this.tpOwnCloud.Controls.Add(this.txtOwnCloudPath);
+            this.tpOwnCloud.Controls.Add(this.txtOwnCloudURLPath);
             this.tpOwnCloud.Controls.Add(this.txtOwnCloudPassword);
             this.tpOwnCloud.Controls.Add(this.txtOwnCloudUsername);
             this.tpOwnCloud.Controls.Add(this.txtOwnCloudHost);
@@ -2574,6 +2576,12 @@ namespace ShareX.UploadersLib
             resources.ApplyResources(this.txtOwnCloudPath, "txtOwnCloudPath");
             this.txtOwnCloudPath.Name = "txtOwnCloudPath";
             this.txtOwnCloudPath.TextChanged += new System.EventHandler(this.txtOwnCloudPath_TextChanged);
+            // 
+            // txtOwnCloudURLPath
+            // 
+            resources.ApplyResources(this.txtOwnCloudURLPath, "txtOwnCloudURLPath");
+            this.txtOwnCloudURLPath.Name = "txtOwnCloudURLPath";
+            this.txtOwnCloudURLPath.TextChanged += new System.EventHandler(this.txtOwnCloudURLPath_TextChanged);
             // 
             // txtOwnCloudPassword
             // 
@@ -5302,6 +5310,7 @@ namespace ShareX.UploadersLib
         private System.Windows.Forms.CheckBox cbGoogleDriveUseFolder;
         private System.Windows.Forms.Label lblWidthHint;
         private System.Windows.Forms.TextBox txtOwnCloudPath;
+        private System.Windows.Forms.TextBox txtOwnCloudURLPath;
         private System.Windows.Forms.TextBox txtOwnCloudPassword;
         private System.Windows.Forms.TextBox txtOwnCloudUsername;
         private System.Windows.Forms.TextBox txtOwnCloudHost;
